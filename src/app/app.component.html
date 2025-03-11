@@ -1,0 +1,40 @@
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <!-- <h1 class="title">Hello, {{ title }}</h1> -->
+      <!-- <p [style]="style">test</p>
+      @for (item of array; track $index) {
+        <p class="array">{{item}}</p>
+       } -->
+      <div>
+        <p class="error">
+          {{validateError}}
+        </p>
+         <input id="textInput" [(ngModel)] = "name" value="name" placeholder="Введите текст" />
+         <input id="textInput" [(ngModel)] = "age" value="age" placeholder="Введите текст" />
+       
+          <button class="button" (click)="addUser()">Add User</button>
+          
+      </div>
+
+
+      <div class="users">
+        @for (item of users; track $index) {
+        <div class="card">
+          <div class="avatar">
+            <img [src]="item.avatar" alt="">
+          </div>
+          <div class="title">
+            {{item.name}}
+          </div>
+          <div class="age">
+            {{item.age}}
+          </div>
+          <button class="btn" (click)="removeUser(item.id)">Удалить</button>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</main>
+<router-outlet />
