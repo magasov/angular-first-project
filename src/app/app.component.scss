@@ -1,125 +1,118 @@
 .main {
+  max-width: 1242px;
+  margin: 0 auto;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+
+  header {
     display: flex;
-    justify-content: center;
+    height: 108px;
+    box-shadow: 0px 12px 24px 0px #14142b1c;
+    border-radius: 18px;
+    display: flex;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f0f2f5;
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-  }
-  
-  .content {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .left-side {
-    width: 100%;
-  }
-  
-  /* Стили для текста и массива */
-  p[style] {
-    font-size: 1.2rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .array {
-    font-size: 1rem;
-    color: #555;
-    text-align: center;
-    margin: 5px 0;
-  }
-  
-  /* Стили для формы добавления пользователя */
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  input:focus {
-    border-color: #007bff;
-  }
-  
-  .button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Стили для карточек пользователей */
-  .users {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .avatar {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-  }
-  
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin: 15px 0;
-    color: #333;
-  }
-  
-  .age {
-    font-size: 1rem;
-    text-align: center;
-    color: #666;
-    margin-bottom: 15px;
+    color: #170F49;
+    font-size: 19px;
+    font-weight: 700;
   }
 
-.btn {
-    padding: 10px 20px;
-    margin: 0 20px;
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 680px;
+    margin: 50px auto;
+    
+    h1 {
+      font-weight: 700;
+      font-size: 34px;
+      line-height: 46px;
+    }
+    
+    p {
+      text-align: center;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #6F6C90;
+
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    background: #FAF8F8;
+    padding: 30px 30px 70px;
+    max-width: 580px;
+    margin: 0 auto;
+    border-radius: 34px;
+    gap: 25px;
+
+    &__text {
+      padding: 0 20px;
+    }
+
+    hr {
+      height: 1px;
+      background: #D9DBE9;
+      border: 0;
+    }
+
+    .form_test {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        color: #170F49;
+        font-weight: 500;
+        
+
+        input {
+          padding: 20px;
+          border: 0;
+          border-radius: 46px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 20px;
+          box-shadow: 0px 2px 6px 0px #13124212;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: 50px auto ;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 20px;
+    border-radius: 56px;
+    background: linear-gradient(180deg, #9E96F2 0%, #EC31F0 100%);
+    border: 0;
+    color: #FFFFFF;
+  }
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid red;
 }

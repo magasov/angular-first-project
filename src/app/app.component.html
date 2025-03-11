@@ -1,40 +1,66 @@
 <main class="main">
-  <div class="content">
-    <div class="left-side">
-      <!-- <h1 class="title">Hello, {{ title }}</h1> -->
-      <!-- <p [style]="style">test</p>
-      @for (item of array; track $index) {
-        <p class="array">{{item}}</p>
-       } -->
-      <div>
-        <p class="error">
-          {{validateError}}
-        </p>
-         <input id="textInput" [(ngModel)] = "name" value="name" placeholder="Введите текст" />
-         <input id="textInput" [(ngModel)] = "age" value="age" placeholder="Введите текст" />
-       
-          <button class="button" (click)="addUser()">Add User</button>
-          
-      </div>
+  <header>
+    Get an Estimate for Workspace
+  </header>  
 
-
-      <div class="users">
-        @for (item of users; track $index) {
-        <div class="card">
-          <div class="avatar">
-            <img [src]="item.avatar" alt="">
-          </div>
-          <div class="title">
-            {{item.name}}
-          </div>
-          <div class="age">
-            {{item.age}}
-          </div>
-          <button class="btn" (click)="removeUser(item.id)">Удалить</button>
-        </div>
-        }
-      </div>
+  <section>
+    <div class="text">
+      <h1>Post Your Requirements</h1>
+      <p>Please fill the form below to receive a quote for workspace. Please add all the details required.</p>
     </div>
-  </div>
+
+    <div class="form">
+      <div class="form__text">
+        <h3>Contact details</h3>
+        <p>Please fill your information so we can get in touch with you.</p>
+      </div>
+      <hr>
+
+      <div class="form_test">
+        <label for="name">
+          Name <br>
+          <input id="textInput" [(ngModel)] = "name" value="name" placeholder="Your Name">
+        </label>
+        <label for="name">
+          Phone Number <br>
+          <input type="number" [(ngModel)] = "number" value="number"  placeholder="(123) 456 - 7890">
+        </label>
+        <label for="name">
+          Email <br>
+          <input type="text" [(ngModel)] = "email" value="email" placeholder="Your Mail ID">
+        </label>
+        <label for="name">
+          Date <br>
+          <input type="text" [(ngModel)] = "date" value="date" placeholder=" dd - mm - yyyy">
+        </label>
+      </div>
+
+      <p class="error">
+        {{validateError}}
+      </p>
+    </div>
+
+    <button (click)="addUser()">Submit</button>
+
+    <div class="users">
+      @for (item of users; track $index) {
+      <div class="card">
+        <div>
+          {{item.name}}
+        </div>
+        <div>
+          {{item.number}}
+        </div>
+        <div>
+          {{item.email}}
+        </div>
+        <div>
+          {{item.date}}
+        </div>
+        <div class="btn" (click)="removeUser(item.id)">Удалить</div>
+      </div>
+      }
+    </div>
+  </section>
 </main>
 <router-outlet />
